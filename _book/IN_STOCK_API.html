@@ -1,0 +1,301 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>入库单 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    项目简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="IN_STOCK_API.html">
+            
+                <a href="IN_STOCK_API.html">
+            
+                    
+                    入库单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >入库单</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="ans-api">ans api</h3>
+<h3 id="asn&#x5355;&#x4E3B;&#x5217;&#x8868;">asn&#x5355;&#x4E3B;&#x5217;&#x8868;</h3>
+<blockquote>
+<p>type: json</p>
+<p>api: 127.0.0.1:3000/asn/</p>
+<p>?pageno=1&amp;pagesize=10&amp;flag=A</p>
+<p>&#x6570;&#x636E;&#x683C;&#x5F0F;</p>
+</blockquote>
+<pre><code>{
+  &apos;data&apos;:{
+      &quot;rows&quot;: [
+          {
+              &quot;_id&quot;: &quot;5731d78863af95c80a34144f&quot;,
+              &quot;asn_id&quot;: &quot;ASN0009&quot;,
+              &quot;supplier&quot;: &quot;ldl&quot;,
+              &quot;asn_statu&quot;: &quot;A&quot;,
+              &quot;asn_create_date&quot;: &quot;2016-05-10T12:43:52.007Z&quot;
+          },
+          {
+              &quot;_id&quot;: &quot;5731d78863af95c80a34144c&quot;,
+              &quot;asn_id&quot;: &quot;ASN0008&quot;,
+              &quot;supplier&quot;: &quot;ldl&quot;,
+              &quot;asn_statu&quot;: &quot;A&quot;,
+              &quot;asn_create_date&quot;: &quot;2016-05-10T12:43:52.005Z&quot;
+          }
+      ],
+      &quot;total&quot;: 30
+  },&apos;status&apos;:{&apos;code&apos;:0,&apos;msg&apos;:&apos;success&apos;}
+}
+</code></pre><h3 id="asn-detail">asn detail</h3>
+<blockquote>
+<p>type: json</p>
+<p>api: 127.0.0.1:3000/asn/detail/:asn_id</p>
+<p>asn_id = asn001</p>
+<p>&#x6570;&#x636E;&#x683C;&#x5F0F;</p>
+</blockquote>
+<pre><code>{
+    &quot;_id&quot;: &quot;5731d78863af95c80a34144f&quot;,
+    &quot;asn_detail&quot;: [
+        {
+            &quot;pro_name&quot;: &quot;&#x6787;&#x6777;&#x9732;1&quot;,
+            &quot;pro_spec&quot;: &quot;0.2g&quot;,
+            &quot;pro_origin&quot;: &quot;&#x77F3;&#x5BB6;&#x5E84;&quot;,
+            &quot;pro_pack_size&quot;: &quot;100&quot;,
+            &quot;pro_birth_date&quot;: &quot;2016-05-10T12:43:52.007Z&quot;,
+            &quot;pro_dead_date&quot;: &quot;2016-05-10T12:43:52.007Z&quot;,
+            &quot;qty&quot;: 100,
+            &quot;_id&quot;: &quot;5731d78863af95c80a341451&quot;
+        },
+        {
+            &quot;pro_name&quot;: &quot;&#x6787;&#x6777;&#x9732;2&quot;,
+            &quot;pro_spec&quot;: &quot;0.2g&quot;,
+            &quot;pro_origin&quot;: &quot;&#x77F3;&#x5BB6;&#x5E84;&quot;,
+            &quot;pro_pack_size&quot;: &quot;100&quot;,
+            &quot;pro_birth_date&quot;: &quot;2016-05-10T12:43:52.007Z&quot;,
+            &quot;pro_dead_date&quot;: &quot;2016-05-10T12:43:52.007Z&quot;,
+            &quot;qty&quot;: 100,
+            &quot;_id&quot;: &quot;5731d78863af95c80a341450&quot;
+        }
+    ]
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 项目简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"入库单","level":"1.2","depth":1,"previous":{"title":"项目简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"IN_STOCK_API.md","mtime":"2016-06-12T15:11:42.096Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-12T15:06:34.453Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
